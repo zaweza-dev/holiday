@@ -117,7 +117,8 @@ header nav ul li a:hover {
 
 /* HOME (HERO SECTION) */
 .hero {
-    background: url('placeholder_hero.jpg') no-repeat center center/cover;
+    /* Ganti 'placeholder_hero.jpg' dengan nama file gambar Anda */
+    background: url('placeholder_hero.jpg') no-repeat center center/cover; 
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -135,12 +136,12 @@ header nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5); /* Overlay hitam transparan */
 }
 
 .hero .container {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Pastikan teks di atas gambar dan overlay */
 }
 
 .hero h2 {
