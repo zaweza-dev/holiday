@@ -127,8 +127,10 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden; /* Penting untuk animasi zoom agar tidak keluar batas */
 }
 
+/* Animasi untuk gambar hero */
 .hero::before {
     content: '';
     position: absolute;
@@ -137,6 +139,32 @@ header nav ul li a:hover {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Overlay hitam transparan */
+    z-index: 1;
+    transition: background-color 0.3s ease; /* Transisi untuk overlay */
+}
+
+.hero:hover::before {
+    background-color: rgba(0, 0, 0, 0.6); /* Sedikit lebih gelap saat hover */
+}
+
+/* Efek zoom pada gambar latar belakang hero */
+.hero::after { /* Menggunakan pseudo-element lain untuk gambar latar belakang */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Mengambil latar belakang dari .hero */
+    background-size: cover;
+    background-position: center center;
+    z-index: 0; /* Di belakang overlay dan konten */
+    transform: scale(1);
+    transition: transform 0.5s ease; /* Animasi zoom */
+}
+
+.hero:hover::after {
+    transform: scale(1.05); /* Zoom in 5% saat hover */
 }
 
 .hero .container {
@@ -177,6 +205,7 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative; /* Penting untuk penempatan overlay gambar */
 }
 
 .villa-card:hover {
@@ -190,7 +219,31 @@ header nav ul li a:hover {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Animasi zoom untuk gambar villa */
 }
+
+.villa-card:hover img {
+    transform: scale(1.05); /* Zoom in 5% saat hover */
+}
+
+/* Efek overlay pada gambar villa saat hover */
+.villa-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* Awalnya transparan penuh */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Di atas gambar tapi di bawah teks card */
+}
+
+.villa-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.2); /* Menjadi sedikit gelap saat hover */
+}
+
 
 .villa-card h3 {
     color: #ff6f61;
@@ -199,11 +252,15 @@ header nav ul li a:hover {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    position: relative; /* Pastikan teks di atas overlay */
+    z-index: 2;
 }
 
 .villa-card p {
     margin: 5px 0;
     font-size: 0.95em;
+    position: relative; /* Pastikan teks di atas overlay */
+    z-index: 2;
 }
 
 .villa-card .advantage {
@@ -211,7 +268,14 @@ header nav ul li a:hover {
     color: #38a169;
     margin-top: 10px;
     margin-bottom: 20px;
+    position: relative; /* Pastikan teks di atas overlay */
+    z-index: 2;
 }
+.villa-card .btn.secondary {
+    position: relative; /* Pastikan tombol di atas overlay */
+    z-index: 2;
+}
+
 
 /* WHY US SECTION */
 .why-us {
@@ -233,6 +297,11 @@ header nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     flex: 1;
+    transition: transform 0.3s ease; /* Animasi untuk benefit cards */
+}
+
+.benefit:hover {
+    transform: translateY(-5px); /* Sedikit naik saat hover */
 }
 
 .benefit h3 {
