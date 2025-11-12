@@ -6,17 +6,22 @@
     <title>Holiday - Sewa Villa Eksklusif di Bali</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1 class="logo">Holiday</h1>
+            <div class="logo-container">
+                <i class="fas fa-umbrella-beach fa-2x logo-icon"></i> 
+                <h1 class="logo">Holiday</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Beranda</a></li>
                     <li><a href="#villas">Villa Kami</a></li>
                     <li><a href="#why-us">Kenapa Kami</a></li>
+                    <li><a href="#booking">Pemesanan</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
             </nav>
@@ -40,9 +45,9 @@
                     <h3>The Sunset Retreat</h3>
                     <p class="location">**Alamat:** Seminyak, Bali</p>
                     <p class="rooms">**Kamar:** 3 Kamar Tidur Mewah</p>
-                    <p class="description">Villa modern dengan pemandangan matahari terbenam yang menakjubkan. Dikelilingi taman tropis dan kolam renang pribadi.</p>
-                    <p class="advantage">**Kelebihan:** Lokasi strategis dekat pantai dan restoran populer, layanan housekeeping harian.</p>
-                    <button class="btn whatsapp" data-villa="The Sunset Retreat">Pesan via WhatsApp</button>
+                    <p class="description">Villa modern dengan pemandangan matahari terbenam yang menakjubkan.</p>
+                    <p class="advantage">**Kelebihan:** Lokasi strategis dekat pantai dan restoran populer.</p>
+                    <a href="#booking" class="btn secondary select-villa" data-villa="The Sunset Retreat">Pesan Villa Ini</a>
                 </div>
 
                 <div class="villa-card">
@@ -50,9 +55,9 @@
                     <h3>Ubud Sanctuary</h3>
                     <p class="location">**Alamat:** Ubud, Bali</p>
                     <p class="rooms">**Kamar:** 4 Kamar Tidur + Kolam Infinity</p>
-                    <p class="description">Tempat perlindungan yang tenang di tengah sawah Ubud. Sempurna untuk yoga dan meditasi. Desain arsitektur tradisional Bali.</p>
-                    <p class="advantage">**Kelebihan:** Pemandangan sawah abadi, sarapan khas Bali gratis, staf villa 24 jam.</p>
-                    <button class="btn whatsapp" data-villa="Ubud Sanctuary">Pesan via WhatsApp</button>
+                    <p class="description">Tempat perlindungan yang tenang di tengah sawah Ubud.</p>
+                    <p class="advantage">**Kelebihan:** Pemandangan sawah abadi, sarapan khas Bali gratis.</p>
+                    <a href="#booking" class="btn secondary select-villa" data-villa="Ubud Sanctuary">Pesan Villa Ini</a>
                 </div>
 
                 <div class="villa-card">
@@ -60,9 +65,9 @@
                     <h3>Coastal Haven</h3>
                     <p class="location">**Alamat:** Canggu, Bali</p>
                     <p class="rooms">**Kamar:** 2 Kamar Tidur Minimalis</p>
-                    <p class="description">Villa bergaya industrial-chic, hanya beberapa langkah dari pantai selancar terbaik di Canggu.</p>
-                    <p class="advantage">**Kelebihan:** Akses mudah ke kafe dan tempat selancar, rooftop terrace untuk BBQ.</p>
-                    <button class="btn whatsapp" data-villa="Coastal Haven">Pesan via WhatsApp</button>
+                    <p class="description">Villa bergaya industrial-chic, hanya beberapa langkah dari pantai.</p>
+                    <p class="advantage">**Kelebihan:** Akses mudah ke kafe dan tempat selancar.</p>
+                    <a href="#booking" class="btn secondary select-villa" data-villa="Coastal Haven">Pesan Villa Ini</a>
                 </div>
 
                 <div class="villa-card">
@@ -70,9 +75,9 @@
                     <h3>Family Paradise</h3>
                     <p class="location">**Alamat:** Sanur, Bali</p>
                     <p class="rooms">**Kamar:** 5 Kamar Tidur Besar</p>
-                    <p class="description">Villa ideal untuk liburan keluarga besar. Area bermain anak yang luas dan kolam renang dangkal.</p>
-                    <p class="advantage">**Kelebihan:** Lingkungan yang aman dan tenang, fasilitas dapur lengkap, dekat dengan pelabuhan untuk akses ke Nusa Penida.</p>
-                    <button class="btn whatsapp" data-villa="Family Paradise">Pesan via WhatsApp</button>
+                    <p class="description">Villa ideal untuk liburan keluarga besar. Area bermain anak yang luas.</p>
+                    <p class="advantage">**Kelebihan:** Lingkungan yang aman dan tenang.</p>
+                    <a href="#booking" class="btn secondary select-villa" data-villa="Family Paradise">Pesan Villa Ini</a>
                 </div>
 
                 <div class="villa-card">
@@ -80,9 +85,9 @@
                     <h3>Mountain Breeze</h3>
                     <p class="location">**Alamat:** Munduk, Bali Utara</p>
                     <p class="rooms">**Kamar:** 1 Kamar Tidur Romantis</p>
-                    <p class="description">Villa intim dengan suasana pegunungan yang sejuk. Cocok untuk pasangan yang mencari ketenangan dan pemandangan danau.</p>
-                    <p class="advantage">**Kelebihan:** Suhu udara yang dingin, perapian, dikelilingi kebun cengkeh dan kopi.</p>
-                    <button class="btn whatsapp" data-villa="Mountain Breeze">Pesan via WhatsApp</button>
+                    <p class="description">Villa intim dengan suasana pegunungan yang sejuk.</p>
+                    <p class="advantage">**Kelebihan:** Suhu udara yang dingin, perapian.</p>
+                    <a href="#booking" class="btn secondary select-villa" data-villa="Mountain Breeze">Pesan Villa Ini</a>
                 </div>
             </div>
         </div>
@@ -102,9 +107,45 @@
                 </div>
                 <div class="benefit">
                     <h3>Layanan Personal</h3>
-                    <p>Tim kami siap membantu Anda 24/7, mulai dari saat pemesanan hingga check-out, memastikan liburan Anda berjalan lancar.</p>
+                    <p>Tim kami siap membantu Anda 24/7, memastikan liburan Anda berjalan lancar.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-form">
+        <div class="container">
+            <h2>📝 Formulir Pemesanan Villa</h2>
+            <p class="selected-villa-info">Villa yang Anda pilih: <span id="selectedVillaName">-- Belum Ada Villa yang Dipilih --</span></p>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="fullName">Nama Lengkap:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon (WhatsApp):</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Contoh: 081234567890">
+                </div>
+                <div class="form-group">
+                    <label for="checkIn">Tanggal Check-In:</label>
+                    <input type="date" id="checkIn" name="checkIn" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkOut">Tanggal Check-Out:</label>
+                    <input type="date" id="checkOut" name="checkOut" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Jumlah Tamu:</label>
+                    <input type="number" id="guests" name="guests" required min="1" value="2">
+                </div>
+                
+                <input type="hidden" id="hiddenVillaName" name="villaName">
+                
+                <button type="submit" class="btn whatsapp-submit">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang via WhatsApp
+                </button>
+            </form>
         </div>
     </section>
 
